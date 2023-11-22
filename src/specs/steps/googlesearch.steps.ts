@@ -39,7 +39,8 @@ defineFeature(feature, (test) => {
     then("I should see search results", async () => {
       await page.waitForSelector("h3");
       const searchResults = await page.$$("h3");
-      expect(searchResults.length).toBeGreaterThan(0);
+      // expect(searchResults.length).toBeGreaterThan(0);
+      expect(searchResults.length).toBeLessThan(0);
     });
   },20000);
 });
